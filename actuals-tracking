@@ -1,0 +1,75 @@
+#!/usr/bin/env osascript -l JavaScript
+ObjC.import("stdlib");
+ObjC.import("AppKit");
+
+const filePath = "/Users/pahund/Box Sync/Actuals Tracking.xlsx",
+    windowName = "Actuals Tracking";
+
+var excel;
+
+function run(argv) {
+    if (!isExcelRunning()) {
+        startExcel();
+    } 
+
+    excel = Application("Microsoft Excel");
+    excel.includeStandardAdditions = true;
+
+    var actualsTracking = getWindow(windowName);
+
+    if (!actualsTracking) {
+        excel.openWorkbook({
+            workbookFileName: filePath
+        });
+        excel.activate();
+        return;
+    }
+
+    if (isMinimized(actualsTracking)) {
+        show(actualsTracking);
+        return;
+    }
+    hide(actualsTracking);
+}
+
+function getWindow(name) {
+    for (var i = 0; i < excel.windows.length; i++) {
+        const currentWindow = excel.windows[i],
+            currentName = currentWindow.name();
+        if (currentName === name) {
+            return currentWindow;
+        }
+    }
+    return null;
+}
+
+function isMinimized(window) {
+    return window.windowState() === "window state minimized";
+}
+
+function show(window) {
+    window.windowState = "window state normal";
+    excel.activate();
+}
+
+function hide(window) {
+    window.windowState = "window state minimized";
+}
+
+function isExcelRunning() {
+    var apps = ObjC.unwrap($.NSWorkspace.sharedWorkspace.runningApplications);
+    for (var i = 0; i < apps.length; i++) {
+        if (typeof apps[i].bundleIdentifier.isEqualToString === "undefined") {
+            continue;
+        }
+        if (apps[i].bundleIdentifier.isEqualToString("com.microsoft.Excel")) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function startExcel() {
+    $.NSWorkspace.sharedWorkspace.launchApplication("com.microsoft.Excel");
+}
+
