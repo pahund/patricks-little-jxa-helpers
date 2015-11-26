@@ -10,7 +10,7 @@ var excel;
 function run(argv) {
     if (!isExcelRunning()) {
         startExcel();
-    } 
+    }
 
     excel = Application("Microsoft Excel");
     excel.includeStandardAdditions = true;
@@ -41,6 +41,10 @@ function getWindow(name) {
         }
     }
     return null;
+}
+
+function isAtFront(window) {
+
 }
 
 function isMinimized(window) {
