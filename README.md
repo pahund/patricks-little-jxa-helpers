@@ -10,3 +10,9 @@ patricks-little-jxa-helpers
  * [JavaScript for OS X Automation by Example](http://developer.telerik.com/featured/javascript-os-x-automation-example/)
  * [JavaScript for Automation Cookbook](https://github.com/dtinth/JXA-Cookbook/wiki)
  * [JXA Reference in OS X 10.10 Release Notes](OS X 10.10 Release Notes)
+
+## Use With Karabiner
+
+I use [Karabiner](https://github.com/tekezo/Karabiner) to execute my JXA scripts using keyboard shortcuts on an [Ideazon Fang](http://ecx.images-amazon.com/images/I/51XBVJ4807L._SS500_.jpg) keyboard.
+
+You can find my Karabiner configuration file here: [private.xml](karabiner/private.xml)

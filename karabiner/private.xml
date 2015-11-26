@@ -1,0 +1,655 @@
+<?xml version="1.0"?>
+<!-- 
+    Deactivates buttons on the Ideazon Fang gaming keyboard
+    so that they can be used as Keyboard Maestro triggers without side effects
+-->
+<root>
+    <vkopenurldef>
+        <name>KeyCode::VK_OPEN_URL_SHELL_actuals-tracking</name>
+        <url type="shell">
+            <![CDATA[ /Users/pahund/git/patricks-little-jxa-helpers/actuals-tracking ]]>
+        </url>
+    </vkopenurldef>
+    
+    <devicevendordef>
+        <vendorname>Ideazon</vendorname>
+        <vendorid>0x1038</vendorid>
+    </devicevendordef>
+    <deviceproductdef>
+        <productname>Fang</productname>
+        <productid>0x0310</productid>
+    </deviceproductdef>
+    <item>
+        <name>Ideazon Fang</name>
+        <item>
+            <name>New Fang</name>
+            <identifier>private-ideazon-fang-new</identifier>
+            <device_only>DeviceVendor::Ideazon, DeviceProduct::Fang</device_only>
+
+            <!-- *******************
+                 Große Buttons unten
+                 ******************* -->
+
+            <!-- (8) -->
+            <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::W</autogen>
+
+            <!-- CROUCH -->
+            <!--autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::CONTROL_L</autogen-->
+
+            <!-- RUN/WALK -->
+            <!--autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::SHIFT_L</autogen-->
+
+            <!-- (7) -->
+            <!--autogen>__KeyToKey__ KeyCode::C, KeyCode::C</autogen-->
+
+            <!-- (6) -->
+            <!--autogen>__KeyToKey__ KeyCode::B, KeyCode::B</autogen-->
+
+            <!-- (5) -->
+            <!--autogen>__KeyToKey__ KeyCode::V, KeyCode::V</autogen-->
+
+            <!-- ***************************
+                 Pfeiltasten (Schmetterling)
+                 *************************** -->
+
+            <!-- STRAFE LEFT -->
+            <autogen>__KeyToKey__ KeyCode::A, KeyCode::Q</autogen>
+
+            <!-- BACKPEDAL -->
+            <!--autogen>__KeyToKey__ KeyCode::S, KeyCode::S</autogen-->
+
+            <!-- STRAFE RIGHT -->
+            <!--autogen>__KeyToKey__ KeyCode::D, KeyCode::D</autogen-->
+
+            <!-- TURN LEFT -->
+            <autogen>__KeyToKey__ KeyCode::Q, KeyCode::A</autogen>
+
+            <!-- FORWARD -->
+            <autogen>__KeyToKey__ KeyCode::W, KeyCode::Y</autogen>
+
+            <!-- TURN RIGHT -->
+            <!--autogen>__KeyToKey__ KeyCode::D, KeyCode::D</autogen-->
+
+            <!-- ***********
+                 Seite links
+                 *********** -->
+
+            <!-- JUMP (links) -->
+            <autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::N</autogen>
+
+            <!-- P2 -->
+            <!--autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::FORWARD_DELETE</autogen-->
+
+            <!-- ************
+                 Seite rechts
+                 ************ -->
+
+            <!-- JUMP (rechts) -->
+            <!--autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE</autogen-->
+
+            <!-- P1 -->
+            <!--autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::RETURN</autogen-->
+
+            <!-- ********************
+                 Kleine Buttons links
+                 ******************** -->
+
+            <!-- VOICE -->
+            <!--autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::OPTION_L</autogen-->
+
+            <!-- SCORE -->
+            <!--autogen>__KeyToKey__ KeyCode::TAB, KeyCode::TAB</autogen-->
+
+            <!-- (2) -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_6, KeyCode::VK_LOCK_CAPSLOCK</autogen>
+
+            <!-- (1) -->
+            <autogen>__KeyToKey__ KeyCode::F9, KeyCode::L</autogen>
+
+            <!-- OPTIONS -->
+            <!--autogen>__KeyToKey__ KeyCode::F10, KeyCode::F10</autogen-->
+
+            <!-- PAUSE -->
+            <!--autogen>__KeyToKey__ KeyCode::??????, KeyCode::PC_PAUSE</autogen-->
+
+            <!-- ESC -->
+            <!--autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::ESCAPE</autogen-->
+
+            <!-- *********************
+                 Kleine Buttons rechts
+                 ********************* -->
+
+            <!-- USE -->
+            <!--autogen>__KeyToKey__ KeyCode::F, KeyCode::F</autogen-->
+
+            <!-- RELOAD -->
+            <!--autogen>__KeyToKey__ KeyCode::R, KeyCode::R</autogen-->
+
+            <!-- (4) -->
+            <autogen>__KeyToKey__ KeyCode::M, KeyCode::G</autogen>
+
+            <!-- (3) -->
+            <autogen>__KeyToKey__ KeyCode::F5, KeyCode::T</autogen>
+
+            <!-- Q.SAVE -->
+            <autogen>__KeyToKey__ KeyCode::F13, KeyCode::F5</autogen>
+
+            <!-- PRT SCR -->
+            <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::PC_PRINTSCREEN</autogen>
+
+            <!-- Q.LOAD -->
+            <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::F9</autogen>
+
+            <!-- *******
+                 Ziffern
+                 ******* -->
+
+            <!-- 1 -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_1, KeyCode::KEY_1</autogen>
+
+            <!-- 2 -->
+            <!--autogen>__KeyToKey__ KeyCode::KEY_2, KeyCode::KEY_2</autogen-->
+
+            <!-- 3 -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_3, KeyCode::KEY_3</autogen>
+
+            <!-- 4 -->
+            <!--autogen>__KeyToKey__ KeyCode::KEY_4, KeyCode::KEY_4</autogen-->
+
+            <!-- 5 -->
+            <!--autogen>__KeyToKey__ KeyCode::KEY_5, KeyCode::KEY_5</autogen-->
+
+            <!-- 6 -->
+            <!--autogen>__KeyToKey__ KeyCode::KEY_6, KeyCode::KEY_6</autogen-->
+
+            <!-- 7 -->
+            <!--autogen>__KeyToKey__ KeyCode::KEY_7, KeyCode::KEY_7</autogen-->
+
+            <!-- 8 -->
+            <!--autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::KEY_8</autogen-->
+
+            <!-- 9 -->
+            <!--autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::KEY_9</autogen-->
+
+            <!-- 10 -->
+            <!--autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::KEY_0</autogen-->
+
+            <!-- 11 -->
+            <autogen>__KeyToKey__ KeyCode::F7, KeyCode::MINUS</autogen>
+
+        </item>
+        <item>
+            <name>Deactivation</name>
+            <identifier>private-ideazon-fang-deactivation</identifier>
+            <device_only>DeviceVendor::Ideazon, DeviceProduct::Fang</device_only>
+
+            <!-- *******************
+                 Große Buttons unten
+                 ******************* -->
+
+            <!-- (8) -->
+            <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::VK_NONE</autogen>
+
+            <!-- HOCKEN -->
+            <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::VK_NONE</autogen>
+
+            <!-- RENNEN/LAUFEN -->
+            <autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::VK_NONE</autogen>
+
+            <!-- (7) -->
+            <autogen>__KeyToKey__ KeyCode::C, KeyCode::VK_NONE</autogen>
+
+            <!-- (6) -->
+            <autogen>__KeyToKey__ KeyCode::B, KeyCode::VK_NONE</autogen>
+
+            <!-- (5) -->
+            <autogen>__KeyToKey__ KeyCode::V, KeyCode::VK_NONE</autogen>
+
+            <!-- ******************
+                 Pfeiltasten (WASD)
+                 ****************** -->
+
+            <!-- LINKS STRAFEN -->
+            <autogen>__KeyToKey__ KeyCode::A, KeyCode::VK_NONE</autogen>
+
+            <!-- ZURÜCK -->
+            <autogen>__KeyToKey__ KeyCode::S, KeyCode::VK_NONE</autogen>
+
+            <!-- RECHTS STRAFEN -->
+            <autogen>__KeyToKey__ KeyCode::D, KeyCode::VK_NONE</autogen>
+
+            <!-- LINKS DREHEN -->
+            <autogen>__KeyToKey__ KeyCode::Q, KeyCode::VK_NONE</autogen>
+
+            <!-- VORWÄRTS -->
+            <autogen>__KeyToKey__ KeyCode::W, KeyCode::VK_NONE</autogen>
+
+            <!-- RECHTS DREHEN -->
+            <autogen>__KeyToKey__ KeyCode::E, KeyCode::VK_NONE</autogen>
+
+            <!-- ***********
+                 Seite links
+                 *********** -->
+
+            <!-- SPRINGEN (links) -->
+            <autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::VK_NONE</autogen>
+
+            <!-- P2 -->
+            <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::VK_NONE</autogen>
+
+            <!-- ************
+                 Seite rechts
+                 ************ -->
+
+            <!-- SPRINGEN (rechts) -->
+            <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::VK_NONE</autogen>
+
+            <!-- P1 -->
+            <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::VK_NONE</autogen>
+
+            <!-- ********************
+                 Kleine Buttons links
+                 ******************** -->
+
+            <!-- SPRECHEN -->
+            <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::VK_NONE</autogen>
+
+            <!-- PUNKTE -->
+            <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::VK_NONE</autogen>
+
+            <!-- (2) -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_6, KeyCode::VK_NONE</autogen>
+
+            <!-- (1) -->
+            <autogen>__KeyToKey__ KeyCode::F9, KeyCode::VK_NONE</autogen>
+
+            <!-- OPTIONEN -->
+            <autogen>__KeyToKey__ KeyCode::F10, KeyCode::VK_NONE</autogen>
+
+            <!-- PAUSE -->
+            <autogen>__KeyToKey__ KeyCode::PC_PAUSE, KeyCode::VK_NONE</autogen>
+
+            <!-- ESC -->
+            <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::VK_NONE</autogen>
+
+            <!-- *********************
+                 Kleine Buttons rechts
+                 ********************* -->
+
+            <!-- BENUTZ -->
+            <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_NONE</autogen>
+
+            <!-- N.LADEN -->
+            <autogen>__KeyToKey__ KeyCode::R, KeyCode::VK_NONE</autogen>
+
+            <!-- (4) -->
+            <autogen>__KeyToKey__ KeyCode::M, KeyCode::VK_NONE</autogen>
+
+            <!-- (3) -->
+            <autogen>__KeyToKey__ KeyCode::F5, KeyCode::VK_NONE</autogen>
+
+            <!-- SCHN.SP. -->
+            <autogen>__KeyToKey__ KeyCode::F13, KeyCode::VK_NONE</autogen>
+
+            <!-- DRUCK -->
+            <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::VK_NONE</autogen>
+
+            <!-- SCHN.LD. -->
+            <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::VK_NONE</autogen>
+
+            <!-- *******
+                 Ziffern
+                 ******* -->
+
+            <!-- 1 -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_1, KeyCode::VK_NONE</autogen>
+
+            <!-- 2 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_2, KeyCode::VK_NONE</autogen>
+
+            <!-- 3 -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_3, KeyCode::VK_NONE</autogen>
+
+            <!-- 4 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_4, KeyCode::VK_NONE</autogen>
+
+            <!-- 5 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_5, KeyCode::VK_NONE</autogen>
+
+            <!-- 6 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_6, KeyCode::VK_NONE</autogen>
+
+            <!-- 7 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_7, KeyCode::VK_NONE</autogen>
+
+            <!-- 8 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::VK_NONE</autogen>
+
+            <!-- 9 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::VK_NONE</autogen>
+
+            <!-- 10 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::VK_NONE</autogen>
+
+            <!-- 11 -->
+            <autogen>__KeyToKey__ KeyCode::F7, KeyCode::VK_NONE</autogen>
+
+        </item>
+        <item>
+            <name>Dreilinden</name>
+            <identifier>private-ideazon-fang-dreilinden</identifier>
+            <device_only>DeviceVendor::Ideazon, DeviceProduct::Fang</device_only>
+
+            <!-- *******************
+                 Große Buttons unten
+                 ******************* -->
+
+            <!-- HOCKEN -->
+            <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::VK_NONE</autogen>
+
+            <!-- (8) -->
+            <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::COMMAND_L</autogen>
+
+            <!-- RENNEN/LAUFEN -->
+            <autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::VK_NONE</autogen>
+
+            <!-- (7) -->
+            <autogen>__KeyToKey__ KeyCode::C, KeyCode::VK_NONE</autogen>
+
+            <!-- (6) -->
+            <autogen>__KeyToKey__ KeyCode::B, KeyCode::VK_NONE</autogen>
+
+            <!-- (5) -->
+            <autogen>__KeyToKey__ KeyCode::V, KeyCode::VK_NONE</autogen>
+
+            <!-- ******************
+                 Pfeiltasten (WASD)
+                 ****************** -->
+
+            <!-- LINKS STRAFEN -->
+            <autogen>__KeyToKey__ KeyCode::A, KeyCode::CURSOR_LEFT</autogen>
+
+            <!-- ZURÜCK -->
+            <autogen>__KeyToKey__ KeyCode::S, KeyCode::CURSOR_DOWN</autogen>
+
+            <!-- RECHTS STRAFEN -->
+            <autogen>__KeyToKey__ KeyCode::D, KeyCode::CURSOR_RIGHT</autogen>
+
+            <!-- LINKS DREHEN -->
+            <autogen>__KeyToKey__ KeyCode::Q, KeyCode::PAGEDOWN</autogen>
+
+            <!-- VORWÄRTS -->
+            <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_UP</autogen>
+
+            <!-- RECHTS DREHEN -->
+            <autogen>__KeyToKey__ KeyCode::E, KeyCode::CURSOR_RIGHT</autogen>
+
+            <!-- ***********
+                 Seite links
+                 *********** -->
+
+            <!-- SPRINGEN (links) -->
+            <autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::RETURN</autogen>
+
+            <!-- P2 -->
+            <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::VK_NONE</autogen>
+
+            <!-- ************
+                 Seite rechts
+                 ************ -->
+
+            <!-- SPRINGEN (rechts) -->
+            <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::VK_NONE</autogen>
+
+            <!-- P1 -->
+            <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::VK_NONE</autogen>
+
+            <!-- ********************
+                 Kleine Buttons links
+                 ******************** -->
+
+            <!-- SPRECHEN -->
+            <!--autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::VK_NONE</autogen-->
+            <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::VK_OPEN_URL_SHELL_actuals-tracking</autogen>
+
+            <!-- PUNKTE -->
+            <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::VK_NONE</autogen>
+
+            <!-- (2) -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_6, KeyCode::VK_NONE</autogen>
+
+            <!-- (1) -->
+            <autogen>__KeyToKey__ KeyCode::F9, KeyCode::VK_NONE</autogen>
+
+            <!-- OPTIONEN -->
+            <autogen>__KeyToKey__ KeyCode::F10, KeyCode::VK_NONE</autogen>
+
+            <!-- PAUSE -->
+            <autogen>__KeyToKey__ KeyCode::PC_PAUSE, KeyCode::VK_NONE</autogen>
+
+            <!-- ESC -->
+            <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::VK_NONE</autogen>
+
+            <!-- *********************
+                 Kleine Buttons rechts
+                 ********************* -->
+
+            <!-- BENUTZ -->
+            <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_NONE</autogen>
+
+            <!-- N.LADEN -->
+            <autogen>__KeyToKey__ KeyCode::R, KeyCode::VK_NONE</autogen>
+
+            <!-- (4) -->
+            <autogen>__KeyToKey__ KeyCode::M, KeyCode::VK_NONE</autogen>
+
+            <!-- (3) -->
+            <autogen>__KeyToKey__ KeyCode::F5, KeyCode::VK_NONE</autogen>
+
+            <!-- SCHN.SP. -->
+            <autogen>__KeyToKey__ KeyCode::F13, KeyCode::VK_NONE</autogen>
+
+            <!-- DRUCK -->
+            <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::VK_NONE</autogen>
+
+            <!-- SCHN.LD. -->
+            <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::VK_NONE</autogen>
+
+            <!-- *******
+                 Ziffern
+                 ******* -->
+
+            <!-- 1 -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_1, KeyCode::VK_NONE</autogen>
+
+            <!-- 2 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_2, KeyCode::VK_NONE</autogen>
+
+            <!-- 3 -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_3, KeyCode::VK_NONE</autogen>
+
+            <!-- 4 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_4, KeyCode::VK_NONE</autogen>
+
+            <!-- 5 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_5, KeyCode::VK_NONE</autogen>
+
+            <!-- 6 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_6, KeyCode::VK_NONE</autogen>
+
+            <!-- 7 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_7, KeyCode::VK_NONE</autogen>
+
+            <!-- 8 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::VK_NONE</autogen>
+
+            <!-- 9 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::VK_NONE</autogen>
+
+            <!-- 10 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::VK_NONE</autogen>
+
+            <!-- 11 -->
+            <autogen>__KeyToKey__ KeyCode::F7, KeyCode::VK_NONE</autogen>
+
+        </item>
+        <item>
+            <name>Divinity</name>
+            <identifier>private-ideazon-fang-divinity</identifier>
+            <device_only>DeviceVendor::Ideazon, DeviceProduct::Fang</device_only>
+
+            <!-- *******************
+                 Große Buttons unten
+                 ******************* -->
+
+            <!-- (8): Tool-Tipp -->
+            <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::OPTION_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::OPTION_L</autogen>
+
+            <!-- HOCKEN -->
+            <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::VK_NONE</autogen>
+
+            <!-- RENNEN/LAUFEN: Ziel-Info -->
+            <autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::CONTROL_L</autogen>
+
+            <!-- (7): schleichen -->
+            <autogen>__KeyToKey__ KeyCode::C, KeyCode::C</autogen>
+
+            <!-- (6) -->
+            <autogen>__KeyToKey__ KeyCode::B, KeyCode::VK_NONE</autogen>
+
+            <!-- (5): Runde beenden / alles nehmen -->
+            <autogen>__KeyToKey__ KeyCode::V, KeyCode::SPACE</autogen>
+
+            <!-- ******************
+                 Pfeiltasten (WASD)
+                 ****************** -->
+
+            <!-- LINKS STRAFEN: Kamera links -->
+            <!--autogen>__KeyToKey__ KeyCode::A, KeyCode::VK_NONE</autogen-->
+
+            <!-- ZURÜCK: Kamera runter -->
+            <!--autogen>__KeyToKey__ KeyCode::S, KeyCode::VK_NONE</autogen-->
+
+            <!-- RECHTS STRAFEN: Kamera rechts -->
+            <!--autogen>__KeyToKey__ KeyCode::D, KeyCode::VK_NONE</autogen-->
+
+            <!-- LINKS DREHEN: Kamera drehen -->
+            <autogen>__KeyToKey__ KeyCode::Q, KeyCode::V</autogen>
+
+            <!-- VORWÄRTS: Kamera hoch -->
+            <!--autogen>__KeyToKey__ KeyCode::W, KeyCode::VK_NONE</autogen-->
+
+            <!-- RECHTS DREHEN: taktische Ansicht -->
+            <autogen>__KeyToKey__ KeyCode::E, KeyCode::B</autogen>
+
+            <!-- ***********
+                 Seite links
+                 *********** -->
+
+            <!-- SPRINGEN (links): Itemstapel teilen -->
+            <autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::SHIFT_L</autogen>
+
+            <!-- P2 -->
+            <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::VK_NONE</autogen>
+
+            <!-- ************
+                 Seite rechts
+                 ************ -->
+
+            <!-- SPRINGEN (rechts) -->
+            <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::VK_NONE</autogen>
+
+            <!-- P1 -->
+            <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::VK_NONE</autogen>
+
+            <!-- ********************
+                 Kleine Buttons links
+                 ******************** -->
+
+            <!-- SPRECHEN: Fertigkeitenleiste hoch -->
+            <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::R</autogen>
+
+            <!-- PUNKTE: Voriges Gruppenmitglied -->
+            <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::BRACKET_LEFT</autogen>
+
+            <!-- (2): Inventar -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_6, KeyCode::I</autogen>
+
+            <!-- (1): Fertigkeiten -->
+            <autogen>__KeyToKey__ KeyCode::F9, KeyCode::K</autogen>
+
+            <!-- OPTIONEN -->
+            <autogen>__KeyToKey__ KeyCode::F10, KeyCode::VK_NONE</autogen>
+
+            <!-- PAUSE -->
+            <autogen>__KeyToKey__ KeyCode::PC_PAUSE, KeyCode::VK_NONE</autogen>
+
+            <!-- ESC -->
+            <autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::ESCAPE</autogen>
+
+            <!-- *********************
+                 Kleine Buttons rechts
+                 ********************* -->
+
+            <!-- BENUTZ: Fertigkeitenleiste runter -->
+            <autogen>__KeyToKey__ KeyCode::F, KeyCode::F</autogen>
+
+            <!-- N.LADEN: nächstes Gruppenmitglied -->
+            <autogen>__KeyToKey__ KeyCode::R, KeyCode::BRACKET_RIGHT</autogen>
+
+            <!-- (4): Map -->
+            <autogen>__KeyToKey__ KeyCode::M, KeyCode::M</autogen>
+
+            <!-- (3): Questlog -->
+            <autogen>__KeyToKey__ KeyCode::F5, KeyCode::L</autogen>
+
+            <!-- SCHN.SP.: schnell speichern -->
+            <autogen>__KeyToKey__ KeyCode::F13, KeyCode::F5</autogen>
+
+            <!-- DRUCK -->
+            <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::VK_NONE</autogen>
+
+            <!-- SCHN.LD.: schnell laden -->
+            <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::F8</autogen>
+
+            <!-- *******
+                 Ziffern
+                 ******* -->
+
+            <!-- 1: Fertigkeit 1 -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_1, KeyCode::KEY_1</autogen>
+
+            <!-- 2: Fertigkeit 2 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_2, KeyCode::KEY_2</autogen>
+
+            <!-- 3: Fertigkeit 3 -->
+            <autogen>__KeyToKey__ KeyCode::KEYPAD_3, KeyCode::KEY_3</autogen>
+
+            <!-- 4: Fertigkeit 4 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_4, KeyCode::KEY_4</autogen>
+
+            <!-- 5: Fertigkeit 5 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_5, KeyCode::KEY_5</autogen>
+
+            <!-- 6: Fertigkeit 6 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_6, KeyCode::KEY_6</autogen>
+
+            <!-- 7: Fertigkeit 7 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_7, KeyCode::KEY_7</autogen>
+
+            <!-- 8: Fertigkeit 8 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::KEY_8</autogen>
+
+            <!-- 9: Fertigkeit 9 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::KEY_9</autogen>
+
+            <!-- 10: Fertigkeit 0 -->
+            <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::KEY_0</autogen>
+
+            <!-- 11 -->
+            <autogen>__KeyToKey__ KeyCode::F7, KeyCode::VK_NONE</autogen>
+
+        </item>
+    </item>
+</root>
