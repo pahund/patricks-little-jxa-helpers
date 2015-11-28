@@ -10,7 +10,7 @@
 import win from "./lib/win";
 import app from "./lib/app";
 
-window.main = args => {
+window.main = () => {
     const filePath = "/Users/pahund/Box Sync/Actuals Tracking.xlsx",
         excel = app.get("com.microsoft.Excel"),
         actualsTracking = win.getWindow(excel, "Actuals Tracking");
@@ -29,6 +29,5 @@ window.main = args => {
     }
 
     win.hide(actualsTracking);
-    return;
-}
+};
 
