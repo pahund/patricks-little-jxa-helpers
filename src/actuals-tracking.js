@@ -8,7 +8,7 @@ if (!isExcelRunning()) {
 const excel = Application("Microsoft Excel");
 excel.includeStandardAdditions = true;
 
-var actualsTracking = getWindow(windowName);
+const actualsTracking = getWindow(windowName);
 
 if (!actualsTracking) {
     excel.openWorkbook({
@@ -26,7 +26,7 @@ hide(actualsTracking);
 $.exit(0);
 
 function getWindow(name) {
-    for (var i = 0; i < excel.windows.length; i++) {
+    for (let i = 0; i < excel.windows.length; i++) {
         const currentWindow = excel.windows[i],
             currentName = currentWindow.name();
         if (currentName === name) {
@@ -54,8 +54,8 @@ function hide(window) {
 }
 
 function isExcelRunning() {
-    var apps = ObjC.unwrap($.NSWorkspace.sharedWorkspace.runningApplications);
-    for (var i = 0; i < apps.length; i++) {
+    const apps = ObjC.unwrap($.NSWorkspace.sharedWorkspace.runningApplications);
+    for (let i = 0; i < apps.length; i++) {
         if (typeof apps[i].bundleIdentifier.isEqualToString === "undefined") {
             continue;
         }

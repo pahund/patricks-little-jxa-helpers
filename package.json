@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/pahund/patricks-little-jxa-helpers/issues"
   },
-  "homepage": "https://github.com/pahund/patricks-little-jxa-helpers"
+  "homepage": "https://github.com/pahund/patricks-little-jxa-helpers",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "webpack": "^1.12.9"
+  }
 }

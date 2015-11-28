@@ -13,6 +13,17 @@ module.exports = {
         path: __dirname + "/bin",
         filename: "actuals-tracking"
     },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                loader: "babel",
+                query: {
+                    presets: ["es2015"]
+                }
+            }
+        ]
+    },
     plugins: [
         new webpack.BannerPlugin(
             "#!/usr/bin/env osascript -l JavaScript\n" +
