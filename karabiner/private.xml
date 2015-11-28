@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- 
+<!--
     Deactivates buttons on the Ideazon Fang gaming keyboard
     so that they can be used as Keyboard Maestro triggers without side effects
 -->
@@ -7,10 +7,10 @@
     <vkopenurldef>
         <name>KeyCode::VK_OPEN_URL_SHELL_actuals-tracking</name>
         <url type="shell">
-            <![CDATA[ /Users/pahund/git/patricks-little-jxa-helpers/actuals-tracking ]]>
+            <![CDATA[ /Users/pahund/git/patricks-little-jxa-helpers/bin/actuals-tracking ]]>
         </url>
     </vkopenurldef>
-    
+
     <devicevendordef>
         <vendorname>Ideazon</vendorname>
         <vendorid>0x1038</vendorid>
