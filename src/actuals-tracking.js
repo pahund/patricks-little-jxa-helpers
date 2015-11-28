@@ -13,7 +13,7 @@ import app from "./lib/app";
 window.main = () => {
     const filePath = "/Users/pahund/Box Sync/Actuals Tracking.xlsx",
         excel = app.get("com.microsoft.Excel"),
-        actualsTracking = win.getWindow(excel, "Actuals Tracking");
+        actualsTracking = win.get(excel, "Actuals Tracking");
 
     if (!actualsTracking) {
         excel.openWorkbook({
