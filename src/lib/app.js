@@ -1,6 +1,8 @@
 /**
  * app.js
  *
+ * Utility functions for controlling OS X applications.
+ *
  * @author <a href="mailto:pahund@team.mobile.de">Patrick Hund</a>
  * @since 28 Nov 2015
  */

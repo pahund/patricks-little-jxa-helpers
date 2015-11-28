@@ -4,7 +4,7 @@
  * @author <a href="mailto:pahund@team.mobile.de">Patrick Hund</a>
  * @since 27 Nov 2015
  */
-const webpack = require("webpack");
+const JxaPlugin = require("./src/plugin/jxa-plugin");
 
 module.exports = {
     context: __dirname + "/src",
@@ -25,15 +25,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.BannerPlugin(
-            "#!/usr/bin/env osascript -l JavaScript\n" +
-            "ObjC.import(\"stdlib\");\n" +
-            "ObjC.import(\"AppKit\");\n" +
-            "window = this;\n",
-            {
-                raw: true,
-                entryOnly: true
-            }
-        )
+        new JxaPlugin()
     ]
 };

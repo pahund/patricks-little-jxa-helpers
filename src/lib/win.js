@@ -1,6 +1,8 @@
 /**
  * win.js
  *
+ * Utility functions for manipulating windows of OS X applications.
+ *
  * @author <a href="mailto:pahund@team.mobile.de">Patrick Hund</a>
  * @since 28 Nov 2015
  */

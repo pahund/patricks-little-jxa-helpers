@@ -1,24 +1,34 @@
+/**
+ * actuals-tracking.js
+ *
+ * Starts, activates, minimizes MS Excel with spreadsheet
+ * "Actuals Tracking.xlsx".
+ *
+ * @author <a href="mailto:pahund@team.mobile.de">Patrick Hund</a>
+ * @since 26 Nov 2015
+ */
 import win from "./lib/win";
 import app from "./lib/app";
-import proc from "./lib/proc";
 
-const filePath = "/Users/pahund/Box Sync/Actuals Tracking.xlsx",
-    excel = app.get("com.microsoft.Excel"),
-    actualsTracking = win.getWindow(excel, "Actuals Tracking");
+window.main = args => {
+    const filePath = "/Users/pahund/Box Sync/Actuals Tracking.xlsx",
+        excel = app.get("com.microsoft.Excel"),
+        actualsTracking = win.getWindow(excel, "Actuals Tracking");
 
-if (!actualsTracking) {
-    excel.openWorkbook({
-        workbookFileName: filePath
-    });
-    excel.activate();
-    proc.end();
+    if (!actualsTracking) {
+        excel.openWorkbook({
+            workbookFileName: filePath
+        });
+        excel.activate();
+        return;
+    }
+
+    if (win.isMinimized(actualsTracking)) {
+        win.show(excel, actualsTracking);
+        return;
+    }
+
+    win.hide(actualsTracking);
+    return;
 }
-
-if (win.isMinimized(actualsTracking)) {
-    win.show(excel, actualsTracking);
-    proc.end();
-}
-
-win.hide(actualsTracking);
-proc.end();
 
