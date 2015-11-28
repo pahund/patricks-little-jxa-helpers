@@ -1,3 +1,5 @@
+import win from "./lib/win";
+
 const filePath = "/Users/pahund/Box Sync/Actuals Tracking.xlsx",
     windowName = "Actuals Tracking";
 
@@ -8,7 +10,7 @@ if (!isExcelRunning()) {
 const excel = Application("Microsoft Excel");
 excel.includeStandardAdditions = true;
 
-const actualsTracking = getWindow(windowName);
+const actualsTracking = win.getWindow(excel, windowName);
 
 if (!actualsTracking) {
     excel.openWorkbook({
@@ -18,40 +20,13 @@ if (!actualsTracking) {
     $.exit(0);
 }
 
-if (isMinimized(actualsTracking)) {
-    show(actualsTracking);
+if (win.isMinimized(actualsTracking)) {
+    win.show(excel, actualsTracking);
     $.exit(0);
 }
-hide(actualsTracking);
+
+win.hide(actualsTracking);
 $.exit(0);
-
-function getWindow(name) {
-    for (let i = 0; i < excel.windows.length; i++) {
-        const currentWindow = excel.windows[i],
-            currentName = currentWindow.name();
-        if (currentName === name) {
-            return currentWindow;
-        }
-    }
-    return null;
-}
-
-function isAtFront(window) {
-
-}
-
-function isMinimized(window) {
-    return window.windowState() === "window state minimized";
-}
-
-function show(window) {
-    window.windowState = "window state normal";
-    excel.activate();
-}
-
-function hide(window) {
-    window.windowState = "window state minimized";
-}
 
 function isExcelRunning() {
     const apps = ObjC.unwrap($.NSWorkspace.sharedWorkspace.runningApplications);
