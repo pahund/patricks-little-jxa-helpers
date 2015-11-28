@@ -1,47 +1,24 @@
 import win from "./lib/win";
+import app from "./lib/app";
+import proc from "./lib/proc";
 
 const filePath = "/Users/pahund/Box Sync/Actuals Tracking.xlsx",
-    windowName = "Actuals Tracking";
-
-if (!isExcelRunning()) {
-    startExcel();
-}
-
-const excel = Application("Microsoft Excel");
-excel.includeStandardAdditions = true;
-
-const actualsTracking = win.getWindow(excel, windowName);
+    excel = app.get("com.microsoft.Excel"),
+    actualsTracking = win.getWindow(excel, "Actuals Tracking");
 
 if (!actualsTracking) {
     excel.openWorkbook({
         workbookFileName: filePath
     });
     excel.activate();
-    $.exit(0);
+    proc.end();
 }
 
 if (win.isMinimized(actualsTracking)) {
     win.show(excel, actualsTracking);
-    $.exit(0);
+    proc.end();
 }
 
 win.hide(actualsTracking);
-$.exit(0);
-
-function isExcelRunning() {
-    const apps = ObjC.unwrap($.NSWorkspace.sharedWorkspace.runningApplications);
-    for (let i = 0; i < apps.length; i++) {
-        if (typeof apps[i].bundleIdentifier.isEqualToString === "undefined") {
-            continue;
-        }
-        if (apps[i].bundleIdentifier.isEqualToString("com.microsoft.Excel")) {
-            return true;
-        }
-    }
-    return false;
-}
-
-function startExcel() {
-    $.NSWorkspace.sharedWorkspace.launchApplication("com.microsoft.Excel");
-}
+proc.end();
 
