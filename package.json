@@ -1,0 +1,19 @@
+{
+  "name": "patricks-little-jxa-helpers",
+  "version": "1.0.0",
+  "description": "Shell scripts that use JavaScript for Automation in Mac OS X (JXA)",
+  "scripts": {
+    "postinstall": "webpack && chmod u+x bin/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pahund/patricks-little-jxa-helpers.git"
+  },
+  "author": "Patrick Hund <pahund@team.mobile.de>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pahund/patricks-little-jxa-helpers/issues"
+  },
+  "homepage": "https://github.com/pahund/patricks-little-jxa-helpers"
+}

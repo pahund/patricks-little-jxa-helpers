@@ -1,36 +1,29 @@
-#!/usr/bin/env osascript -l JavaScript
-ObjC.import("stdlib");
-ObjC.import("AppKit");
-
 const filePath = "/Users/pahund/Box Sync/Actuals Tracking.xlsx",
     windowName = "Actuals Tracking";
 
-var excel;
-
-function run(argv) {
-    if (!isExcelRunning()) {
-        startExcel();
-    }
-
-    excel = Application("Microsoft Excel");
-    excel.includeStandardAdditions = true;
-
-    var actualsTracking = getWindow(windowName);
-
-    if (!actualsTracking) {
-        excel.openWorkbook({
-            workbookFileName: filePath
-        });
-        excel.activate();
-        return;
-    }
-
-    if (isMinimized(actualsTracking)) {
-        show(actualsTracking);
-        return;
-    }
-    hide(actualsTracking);
+if (!isExcelRunning()) {
+    startExcel();
 }
+
+const excel = Application("Microsoft Excel");
+excel.includeStandardAdditions = true;
+
+var actualsTracking = getWindow(windowName);
+
+if (!actualsTracking) {
+    excel.openWorkbook({
+        workbookFileName: filePath
+    });
+    excel.activate();
+    $.exit(0);
+}
+
+if (isMinimized(actualsTracking)) {
+    show(actualsTracking);
+    $.exit(0);
+}
+hide(actualsTracking);
+$.exit(0);
 
 function getWindow(name) {
     for (var i = 0; i < excel.windows.length; i++) {
