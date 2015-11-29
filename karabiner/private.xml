@@ -20,6 +20,11 @@
         <productid>0x0310</productid>
     </deviceproductdef>
     <item>
+        <name>Test Actuals Tracking</name>
+        <identifier>private.test_actuals_tracking</identifier>
+        <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::VK_OPEN_URL_SHELL_actuals-tracking</autogen>
+    </item>
+    <item>
         <name>Ideazon Fang</name>
         <item>
             <name>New Fang</name>
