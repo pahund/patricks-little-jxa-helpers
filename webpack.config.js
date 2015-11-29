@@ -9,8 +9,8 @@ const JxaPlugin = require("./src/plugin/jxa-plugin");
 module.exports = {
     context: __dirname + "/src",
     entry: {
-        "actuals-tracking": "./actuals-tracking.js",
-        "toggle-app-window": "./toggle-app-window.js"
+        "toggle-app-window": "./toggle-app-window.js",
+        "app-info": "./app-info.js"
     },
     output: {
         path: __dirname + "/bin",

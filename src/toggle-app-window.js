@@ -33,6 +33,11 @@ window.main = ([ filePath, bundleId, windowName ]) => {
         return;
     }
 
-    win.hide(w);
+    if (a.frontmost()) {
+        win.hide(w);
+        return;
+    }
+
+    a.activate();
 };
 

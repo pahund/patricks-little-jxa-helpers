@@ -30,5 +30,7 @@ JXA resources on the web:
 * [JavaScript for OS X Automation by Example](http://developer.telerik.com/featured/javascript-os-x-automation-example/)
 * [JavaScript for Automation Cookbook](https://github.com/dtinth/JXA-Cookbook/wiki)
 * [JXA Reference in OS X 10.10 Release Notes](https://developer.apple.com/library/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/OSX10-10.html#//apple_ref/doc/uid/TP40014508-CH109-SW1)
+* [Automation for OS X: the JavaScript way](https://hackmag.com/coding/getting-to-grips-with-javascript-automation-for-os-x/)
+* [Getting Started with JavaScript for Automation on Yosemite](https://www.macstories.net/tutorials/getting-started-with-javascript-for-automation-on-yosemite/)
 
 
