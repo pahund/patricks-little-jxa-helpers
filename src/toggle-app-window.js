@@ -14,6 +14,11 @@ import win from "./lib/win";
 import app from "./lib/app";
 
 window.main = ([ filePath, bundleId, windowName ]) => {
+    if (!filePath || !bundleId || !windowName) {
+        console.log("Usage: toggle-app-window filePath bundleId windowName");
+        console.log("Example: toggle-app-window /Users/jdoe/timesheet.xlsx com.microsoft.Excel Timesheet");
+        return;
+    }
     const a = app.get(bundleId),
         w = win.get(a, windowName);
 
