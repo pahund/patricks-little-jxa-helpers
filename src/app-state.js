@@ -1,37 +1,32 @@
 // noinspection JSUnresolvedFunction,JSUnresolvedVariable
 
-function getProcess(appName) {
-  const sysEv = Application("System Events");
-  for (let i = 0; i < sysEv.processes.length; i++){
-    const process = sysEv.processes[i];
-    if (process.title() === appName) {
-      return process;
-    }
-  }
-  return null;
+function getKmVariable(k) {
+  const kme = Application("Keyboard Maestro Engine");
+  return kme.getvariable(k);
 }
 
 window.main = ([ appName ]) => {
+  console.log("app name:", getKmVariable("appName"))
   if (!appName) {
     console.log("Usage: app-state appName");
     console.log("Example: app-state Safari");
     return;
   }
 
-  const proc = getProcess(appName);
-
-  if (!proc) {
+  if (!Application(appName).running()) {
     console.log("APP_NOT_RUNNING");
+    return;
+  }
+
+  const proc = Application("System Events").processes.byName(appName);
+
+  if (proc.windows.length === 0) {
+    console.log( "APP_RUNNING_NO_WINDOWS");
     return;
   }
 
   if (proc.frontmost()) {
     console.log( "APP_RUNNING_FRONTMOST");
-    return;
-  }
-
-  if (proc.windows.length === 0) {
-    console.log( "APP_RUNNING_NO_WINDOWS");
     return;
   }
 
