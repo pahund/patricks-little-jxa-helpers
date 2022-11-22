@@ -10,7 +10,8 @@ module.exports = {
     context: __dirname + "/src",
     entry: {
         "toggle-app-window": "./toggle-app-window.js",
-        "app-info": "./app-info.js"
+        "app-info": "./app-info.js",
+        "app-state": "./app-state.js"
     },
     output: {
         path: __dirname + "/bin",
